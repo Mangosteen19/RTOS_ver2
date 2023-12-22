@@ -1,0 +1,15 @@
+Tạo 4 task chạy round_robin kết hợp Binary Semaphore:
+Task 1: Gửi kí tự Serial cho ESP và hiển thị lên Serial Monitor
+	
+
+Task 2: Đo nhiệt độ, độ ẩm bằng DHT11 và hiển thị lên cửa sổ Monitor
+Task 3: Cho buzzer phát nhạc MerryChrismast
+Task 4: Led NEO PIXEL hiển thị hiệu ứng cầu vồng
+
+Software timer: Mỗi 1s gọi hàm đọc thời gian RTC và hiển thị lên cửa sổ Monitor
+
+Kiểm tra các kí tự gửi cho Serial Monitor
+	Nếu kí tự đó là:
+	'1' -> Suspend Task5( Dừng hiển thị led NEOPIXEL)
+	'2' -> Resume Task5(Cho phép led NEOPIXEL tiếp tục chạy)
+	'3' -> Give Semaphore cho Task 4 (Cho Buzzer phát 1 bài nhạc sau đó lại đợi Give Semaphore)
